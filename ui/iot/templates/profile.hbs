@@ -1,0 +1,93 @@
+{{!-- The template for showing all quizzes --}}
+<style>
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+}
+.col-md-3 column {  
+   text-align:center;
+}
+</style>
+
+<div id="divProfileTemplate">
+    <h1 info='name'>{{name}}</h1>
+    <div id="divProfile" class="center_div">
+        <div class="form-horizontal">
+            <form>
+                <div class="form-group">
+                <label for="txtFirstName" class="col-md-3 control-label">First Name</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="txtFirstName" value={{first_name}} required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtLastName" class="col-md-3 control-label">Last Name</label>
+                        <div class="col-md-9">
+                        <input type="text" class="form-control" id="txtLastName" value={{last_name}} required>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtEmail" class="col-md-3 control-label">Email</label>
+                        <div class="col-md-9">
+                        <input type="email" class="form-control" id="txtEmail" value={{email}} placeholder="abc@example.com" required>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtAge" class="col-md-3 control-label">Age</label>
+                        <div class="col-md-9">
+                        <input type="number" class="form-control" id="txtAge" value={{age}} required readonly>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtWeight" class="col-md-3 control-label">Weight</label>
+                        <div class="col-md-9">
+                        <input type="number" step="0.01" class="form-control" id="txtWeight" value={{weight}} required>
+                        </div>
+                </div>
+                <div class="form-group">
+                <label for="txtGoal" class="col-md-3 control-label">Goal</label>
+                    <div class="col-md-9">
+                        <select id="txtGoal" value={{goal}} required>
+                            <option value=A>Recovery</option>
+                            <option value=B>Endurance Train</option>
+                            <option value=C>Aerobic Capacity</option>
+                            <option value=D>Lactate Threshold</option>
+                            <option value=E>VO2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                <label for="txtlevelOfFitness" class="col-md-3 control-label">Level of Fitness</label>
+                    <div class="col-md-9">
+                        <select id="txtlevelOfFitness" value={{level_of_fitness}} required>
+                            <option value=1>1</option>
+                            <option value=2>2 </option>
+                            <option value=3>3</option>
+                            <option value=4>4 </option>
+                            <option value=5>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtUserTelegramId" class="col-md-3 control-label">User Telegram Id</label>
+                        <div class="col-md-9">
+                        <input type="text" class="form-control" id="txtUserTelegramId" value={{telegram_ID_user}} required>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtFriendTelegramId" class="col-md-3 control-label">Friend Telegram Id</label>
+                        <div class="col-md-9">
+                        <input type="text" class="form-control" id="txtFriendTelegramId" value={{telegram_ID_friend}} required>
+                        </div>
+                </div>
+                <div class="form-group">
+                        <div class="col-md-3">
+                        <button id="btnSave" type="submit" class="btn btn-primary">Save</button>
+                        <button id="btnCancel" type="button" class="btn btn-primary">Cancel</button>
+                        </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

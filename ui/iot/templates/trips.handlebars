@@ -1,0 +1,90 @@
+    {{!-- The template for showing all issues --}}
+    <style>
+        #divTripsTemplate {
+            display: block;
+        }
+    </style>
+    <div id="divTripsTemplate">
+        <h3>Trips</h3>
+        <div id="divTrips">
+        {{#each .}}
+        <div trip-id="{{id}}" class="panel panel-default">
+            <div class="panel-heading" ><div id="infospan" info='title'>{{datetime}}</div></div>
+            <a href="#trips" action='view'>View</a> 
+        </div>
+        {{/each}}
+        </div>
+        
+        <div id="tripModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 id="modalTitle1" class="modal-title">Trip</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtTripDate" class="col-sm-3 control-label">Date Time</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtTripDate" placeholder="Date" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtAverageSpeed" class="col-sm-3 control-label">Average Speed</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtAverageSpeed" placeholder="Average Speed" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtAverageHeartRate" class="col-sm-3 control-label">Average Heart Rate</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtAverageHeartRate" placeholder="Average Heart Rate" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtMaximumSpeed" class="col-sm-3 control-label">Maximum Speed</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtMaximumSpeed" placeholder="Maximum Speed" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtMaximumHeartRate" class="col-sm-3 control-label">Maximum Heart Rate</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtMaximumHeartRate" placeholder="Maximum Heart Rate" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtMinimumHeartRate" class="col-sm-3 control-label">Minimum Heart Rate</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="txtMinimumHeartRate" placeholder="Minimum Heart Rate" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div id="divSpeedPlot" class="col-sm-9">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div id="divHeartRatePlot" class="col-sm-9">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div id="divMap" class="col-sm-9">
+                                </div>
+                            </div>                          
+                        </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+                        
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
